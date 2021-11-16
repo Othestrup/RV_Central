@@ -5,6 +5,7 @@ class CreateCampers < ActiveRecord::Migration[6.0]
       t.text :description
       t.integer :price
       t.text :review
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
