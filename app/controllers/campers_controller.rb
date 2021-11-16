@@ -1,6 +1,6 @@
 class CampersController < ApplicationController
   def index
-    @campers = Campers.all
+    @campers = Camper.all
   end
 
   def show
