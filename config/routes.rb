@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
 
-  resources :campers, only: [:index, :show] do
-    rwsources :bookings, only: [:new, :create]
+  resources :users, only: [:index, :show, :create, :new]
+
+  resources :campers, only: [:create, :new, :update, :edit, :destroy] do
+    resources :bookings, only: [:create, :new, :edit, :update, :destroy]
   end
 
-  resources :bookings,
-
-
-  resources :users, only: []
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
