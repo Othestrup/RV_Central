@@ -12,8 +12,25 @@
   </head>
 
   <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+  <nav>
+    <h2>RV Central</h2>
+    <ul>
+      <li><a href="#">All Campers</a></li>
+      <li><a href="#">Your bookings</a></li>
+      <li><a href="#">Your profile</a></li>
+    </ul>
+  </nav>
     <%= yield %>
+    <!---<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>--->
+
+
+  <footer>
+    <ul>
+      <li><p>&copy 2021 - RV Central</p></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </footer>
   </body>
 </html>
