@@ -1,1 +1,14 @@
-<h1>title</h1>
+<h1>Selection of campers</h1>
+<div class="container">
+<div class="row">
+    <% @campers.each do |camper| %>
+      <div class="card col-3">
+        <%# <div class="lg-12"> %>
+          <%= image_tag("camper.jpg", :alt => "camperpic", class:"card-image") %>
+            <p class="card-text"><%= link_to camper.name %></p>
+            <p class="card-text"><%= camper.description %></p>
+            </div>
+          <% end %>
+        <%# </div> %>
+    </div>
+</div>
