@@ -12,7 +12,8 @@
     </div>
     <div>
       <h4><%= @campers.price%>€</h4>
-      <a class="btn btn-warning mt-3" style="border-radius: 6px;" href="/campers">Booking</a>
+      <%= link_to "Book now!", new_camper_booking_path(@campers), class: "btn btn-warning mt-3", style: "border-radius: 6px;" "color: white;" %>
+      <%# <a class="btn btn-warning mt-3" style="border-radius: 6px;" href="/campers/camper_id/bookings/new">Booking</a> %>
     </div>
   </div>
 </div>
