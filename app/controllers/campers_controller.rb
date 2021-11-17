@@ -4,7 +4,7 @@ class CampersController < ApplicationController
   end
 
   def show
-    @campers = Camper.find(parms[:id])
+    @campers = Camper.find(params[:id])
   end
 
   def new
