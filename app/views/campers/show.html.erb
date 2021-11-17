@@ -1,17 +1,23 @@
+<p id="notice"><%= notice %></p>
+
 <p>
   <strong>Name:</strong>
-  <%= @camper.name %>
+  <%= @restaurant.name %>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @camper.description %>
+  <strong>Description:</strong>
+  <%= @restaurant.category %>
 </p>
 
+<!--- <p>
+  <strong>Review:</strong>
+</p>
 <ul class="reviews">
-  <% @camper.reviews.each do |review| %>
+  <% @restaurant.reviews.each do |review| %>
     <li><%= review.content %></li>
   <% end %>
- </ul>
+ </ul> --->
 
-<p><%= link_to "<< Go Back to All Campers", campers_path %></p>
+<%= link_to "Book now!", new_camper_booking_path(@camper) %>
+<%= link_to "Back", campers_path %>
