@@ -1,0 +1,6 @@
+<p>Here is your booking:</p>
+
+<%= total_days = @booking.end_date - @booking.start_date %>
+<p>Price per day: <%= @camper.price %> € </p>
+<p>Number of days booked: <%= total_days.to_i %></p>
+<p>Total price of your booking is <%= @camper.price * total_days %></p>

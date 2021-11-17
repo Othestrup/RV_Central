@@ -2,19 +2,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background: white;
+  padding: 1rem 2rem,;
 }
 
 nav ul {
   display: flex;
   list-style: none;
   align-items: center;
-  margin-top: 12px;
+  margin: 0px;
+  padding: 0px;
 }
 
 nav li {
-  padding-left: 1rem;
+  align-items: center;
 }
 
 nav a {
@@ -28,4 +29,21 @@ a {
 
 nav a:hover {
   color: #e57d23;
+}
+
+.logo-image {
+  width: 120px;
+  height: 60px;
+}
+
+.item {
+  flex-grow: 4;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  padding: 0;
 }
