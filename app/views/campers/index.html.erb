@@ -1,14 +1,17 @@
-<h1>Selection of campers</h1>
-<div class="container">
-<div class="row">
+<div class="content-campers mt-5">
+  <h2  class="mb-5">Our campers</h2>
+    <h5 class="cards-introduction mb-5">Find the best <strong>campers 🚐</strong> that suits your needs, and drive to discover new <strong>adventures🏔🌊🚀!</strong></h5>
+  <div class="row">
     <% @campers.each do |camper| %>
-      <div class="card col-3">
-        <%# <div class="lg-12"> %>
-          <%= image_tag("camper.jpg", :alt => "camperpic", class:"card-image") %>
-            <p class="card-text"><%= link_to camper.name %></p>
-            <p class="card-text"><%= camper.description %></p>
-            </div>
-          <% end %>
-        <%# </div> %>
-    </div>
+      <div class="card rounde col-3 mb-5 p-3">
+        <%= image_tag("camper.jpg", :alt => "camperpic", class:"card-img-top pt-5") %>
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to camper.name, camper_path(camper) %></h5>
+          <p class="card-text"><%= camper.description %></p>
+          <p class="card-text"><strong><%= camper.price%>€</strong></p>
+          <p class="btn btn-warning"style="border-radius: 6px;"><%= link_to "View details", camper_path(camper) %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
