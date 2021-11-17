@@ -1,17 +1,18 @@
-<p>
-  <strong>Name:</strong>
-  <%= @camper.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @camper.description %>
-</p>
-
-<ul class="reviews">
-  <% @camper.reviews.each do |review| %>
-    <li><%= review.content %></li>
-  <% end %>
- </ul>
-
-<p><%= link_to "<< Go Back to All Campers", campers_path %></p>
+<div class="content-campers mt-5">
+  <div class="back-list">
+    <a href="/campers/">⬅️ back to campers</a>
+  </div>
+  <div class="image-show">
+    <%= image_tag("camper.jpg", :alt => "camperpic", class:"card-img-top") %>
+  </div>
+  <div class="card-information">
+    <div class="card-name-description">
+      <h2><%= @campers.name %></h2>
+      <h4><%= @campers.description %></h4>
+    </div>
+    <div>
+      <h4><%= @campers.price%>€</h4>
+      <a class="btn btn-warning mt-3" style="border-radius: 6px;" href="/campers">Booking</a>
+    </div>
+  </div>
+</div>
