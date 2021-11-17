@@ -13,10 +13,14 @@
 
   <body>
   <nav>
+<<<<<<< HEAD
     <%= image_tag("rv-logo.png", :alt => "logo", class: "logo-image") %>
     <%# <h2>RV Central</h2> %>
+=======
+    <a class="h2-nav" href="/"><h2>RV Central</h2></a>
+>>>>>>> master
     <ul>
-      <li><a href="#">All Campers</a></li>
+      <li><a href="/campers">All Campers</a></li>
       <li><a href="#">Your bookings</a></li>
       <li><a href="#">Your profile</a></li>
     </ul>
@@ -27,11 +31,24 @@
 
 
   <footer>
-    <ul>
-      <li><p>&copy 2021 - RV Central</p></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">About Us</a></li>
-    </ul>
+    <div>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+        <li><i class="fab fa-facebook"></i></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><p class="text-copyright">&copy 2021 - RV Central</p></li>
+      </ul>
+    </div>
   </footer>
   </body>
 </html>
