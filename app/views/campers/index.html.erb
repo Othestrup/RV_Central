@@ -4,7 +4,11 @@
   <div class="row">
     <% @campers.each do |camper| %>
       <div class="card rounde col-3 mb-5 p-3">
+      <% if camper.image.attached? %>
+      <%= image_tag(camper.image, class:"card-img-top pt-5")%>
+      <% else %>
         <%= image_tag("camper.jpg", :alt => "camperpic", class:"card-img-top pt-5") %>
+      <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= link_to camper.name, camper_path(camper) %></h5>
           <p class="card-text"><%= camper.description %></p>
