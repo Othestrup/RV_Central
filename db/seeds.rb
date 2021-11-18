@@ -17,12 +17,13 @@ Camper.destroy_all
 User.destroy_all
 
 user = User.create!(email: "user@user.com", password: "password")
-
+adrress = ["Carrer Muntaner, Barcelona", "Carrer d'Aragó, Barcelona", "Carrer Villarroel, Barcelona", "Gran Via de les Corts Catalanes, Barcelona"]
 
 20.times do
   Camper.create!(
     name: Faker::Vehicle.manufacture,
     description: Faker::Vehicle.model,
+    address: adrress.sample,
     price: rand(50..300),
     review: Faker::Vehicle.standard_specs,
     user: User.find_by(email: "user@user.com")

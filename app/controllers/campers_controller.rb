@@ -5,6 +5,10 @@ class CampersController < ApplicationController
 
   def show
     @camper = Camper.find(params[:id])
+    @markers = [{
+      lat: @camper.latitude,
+      lng: @camper.longitude
+    }]
     authorize @camper
   end
 
@@ -40,7 +44,7 @@ class CampersController < ApplicationController
   private
 
   def camper_params
-    params.require(:camper).permit(:name, :image, :description, :price)
+    params.require(:camper).permit(:name, :address, :image, :description, :price)
     #:review
   end
 end
