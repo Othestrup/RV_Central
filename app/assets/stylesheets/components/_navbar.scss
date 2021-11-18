@@ -31,6 +31,11 @@ nav a:hover {
   color: #e57d23;
 }
 
+.logo-image {
+  width: 120px;
+  height: 60px;
+}
+
 .item {
   flex-grow: 4;
 }
@@ -41,4 +46,5 @@ nav a:hover {
 
 .nav-link {
   padding: 0;
+  padding: 10px 35px 10px 35px;
 }

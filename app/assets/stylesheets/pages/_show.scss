@@ -3,6 +3,7 @@
   border-radius: 40px;
   box-shadow: 0 4px 8px 0 rgba(15, 15, 15, 0.2);
   margin: 0 auto;
+  height: 200px;
 }
 
 .image-show img {
@@ -19,14 +20,14 @@
   color: black;
 }
 
-.back-list a:hover {
-  color: #e57d23;
-}
-
 .card-information {
   width: 60%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   padding: 30px 0;
+}
+
+.price-booking-text {
+  text-align: right;
 }
