@@ -9,13 +9,15 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
 Booking.destroy_all
 
 Camper.destroy_all
 
 User.destroy_all
 
-User.create!(email: "user@user.com", password: "password")
+user = User.create!(email: "user@user.com", password: "password")
+
 
 20.times do
   Camper.create!(
