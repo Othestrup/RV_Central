@@ -34,7 +34,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "btn btn-warning nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-warning nav-link", style: "border-radius:8px;" %>
         </li>
       <% end %>
   </nav>
@@ -42,7 +42,6 @@
     <%= yield %>
     <!---<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>--->
-
 
   <footer>
     <div>
