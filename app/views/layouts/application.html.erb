@@ -13,11 +13,7 @@
 
   <body>
   <nav>
-
     <%= link_to image_tag("rv-logo.png", :alt => "logo", class: "logo-image" ), "/" %>
-    <%# <a class="h2-nav" href="/"><h2>RV Central</h2></a> %>
-
-    <a href="/">RV Central</a>
     <ul>
       <div class="item">
         <li class="nav-item"><a href="/campers">All Campers</a></li>
@@ -38,7 +34,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "btn btn-warning  p-2 nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-warning nav-link", style: "border-radius:8px;" %>
         </li>
       <% end %>
   </nav>
@@ -46,7 +42,6 @@
     <%= yield %>
     <!---<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>--->
-
 
   <footer>
     <div>

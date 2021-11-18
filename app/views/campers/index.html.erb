@@ -1,4 +1,3 @@
-
 <div class="content-campers mt-5">
   <h2  class="mb-5">Our campers</h2>
     <h5 class="cards-introduction mb-5">Find the best <strong>campers 🚐</strong> that suits your needs, and drive to discover new <strong>adventures🏔🌊🚀!</strong></h5>
@@ -9,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= link_to camper.name, camper_path(camper) %></h5>
           <p class="card-text"><%= camper.description %></p>
-          <p class="card-text"><strong><%= camper.price%>€</strong></p>
+          <p class="card-text"><strong><%= camper.price%>€ / day</strong></p>
           <p class="btn btn-warning"style="border-radius: 6px;"><%= link_to "View details", camper_path(camper) %></p>
         </div>
       </div>

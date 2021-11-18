@@ -1,12 +1,20 @@
-<h1>Book this RV:</h1>
-
-<%= simple_form_for [@camper, @booking] do |f| %>
-  <div class="booking-form">
-    <%= f.input :start_date, as: :date %>
-    <%= f.input :end_date, as: :date %>
-    <p>Day / € <%="#{@camper.price}"%></p>
-    <div class="btn btn-warning mt-3" style="border-radius: 6px;">
-    <%= f.button :submit, value: "Book" %>
-    </div>
+<div class="content-campers mt-5" style="height: 65vh;">
+  <h2>Book the <%="#{@camper.name}"%></h2>
+  <div class="mt-4">
+    <%= simple_form_for [@camper, @booking] do |f| %>
+      <div class="booking-form">
+        <div class="d-flex justify-content-center align-items-center">
+          <h4 class="mb-4 bg-secondary text-white p-2" style="border-radius:5px;"><strong><%="#{@camper.price}"%></strong> € / day</h4>
+        </div>
+          <div class="mb-4">
+            <%= link_to "⬅️ back to #{@camper.name}", camper_path(@camper), class: "text-dark" %>
+          </div>
+        <%= f.input :start_date, as: :date %>
+        <%= f.input :end_date, as: :date %>
+        <div class="form-actions d-flex justify-content-center align-items-center">
+        <%= f.button :submit, value: "Book", class: "btn btn-warning mt-4", style: "border-radius:6px;" %>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
