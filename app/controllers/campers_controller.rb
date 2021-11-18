@@ -8,7 +8,7 @@ class CampersController < ApplicationController
   end
 
   def new
-    @camper.Camper.new
+    @camper = Camper.new
   end
 
   def create
