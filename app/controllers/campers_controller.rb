@@ -5,12 +5,10 @@ class CampersController < ApplicationController
 
   def show
     @camper = Camper.find(params[:id])
-    @markers = Camper.geocoded.map do |camper|
-      {
-        lat: camper.latitude,
-        lng: camper.longitude
-      }
-    end
+    @markers = [{
+      lat: @camper.latitude,
+      lng: @camper.longitude
+    }]
   end
 
   def new
