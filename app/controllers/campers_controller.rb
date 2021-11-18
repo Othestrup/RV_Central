@@ -5,6 +5,12 @@ class CampersController < ApplicationController
 
   def show
     @camper = Camper.find(params[:id])
+    @markers = Camper.geocoded.map do |camper|
+      {
+        lat: camper.latitude,
+        lng: camper.longitude
+      }
+    end
   end
 
   def new
@@ -24,7 +30,7 @@ class CampersController < ApplicationController
   private
 
   def camper_params
-    params.require(:camper).permit(:name, :image, :description, :price)
+    params.require(:camper).permit(:name, :address, :image, :description, :price)
     #:review
   end
 end
