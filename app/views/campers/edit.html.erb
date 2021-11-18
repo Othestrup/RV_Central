@@ -1,0 +1,14 @@
+<h1>Update your camper</h1>
+
+
+<%= simple_form_for [@camper] do |f| %>
+  <div class="booking-form">
+    <%= f.input :name %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :price, label: "Enter your price per day" %>
+    <%= f.input :address, label: "Where is your camper located?" %>
+    <%= f.input :image, as: :file %>
+    <%= f.button :submit, value: "Submit" %>
+    </div>
+  </div>
+<% end %>

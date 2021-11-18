@@ -13,14 +13,12 @@
       <h2><%= @camper.name %></h2>
       <h4><%= @camper.description %></h4>
     </div>
-    <div>
-      <h4><%= @camper.price%>€</h4>
-      <%= link_to "Book now!", new_camper_booking_path(@camper), class: "btn btn-warning mt-3", style: "border-radius: 6px;" "color: white;" %>
     <div class="price-booking-text">
       <h4><%= @camper.price %>€ / day</h4>
       <%= link_to "Book now!", new_camper_booking_path(@camper), class: "btn btn-warning mt-3", style: "border-radius: 6px;" "color: white;" %>
-      <%# <a class="btn btn-warning mt-3" style="border-radius: 6px;" href="/campers/camper_id/bookings/new">Booking</a> %>
-      <%= link_to "Edit task", edit_camper_path %>
+      <% if policy(@camper).edit? %>
+      <%= link_to "Edit your camper", edit_camper_path %>
+      <% end %>
     </div>
   </div>
 </div>
