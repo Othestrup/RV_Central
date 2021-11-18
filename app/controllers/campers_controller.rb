@@ -4,16 +4,17 @@ class CampersController < ApplicationController
   end
 
   def show
-    @campers = Camper.find(params[:id])
+    @camper = Camper.find(params[:id])
   end
 
   def new
-    @camper.Camper.new
+    @camper = Camper.new
   end
 
   def create
     @camper = Camper.new(camper_params)
-    if @camper.save
+    @camper.user = current_user
+    if @camper.save!
       redirect_to camper_path(@camper)
     else
       render :new
@@ -23,7 +24,7 @@ class CampersController < ApplicationController
   private
 
   def camper_params
-    params.require(:camper).permit(:name, :description, :price)
+    params.require(:camper).permit(:name, :image, :description, :price)
     #:review
   end
 end
