@@ -1,5 +1,5 @@
 <div class="content-campers mt-5" style="height: 65vh;">
-  <h2>Book the <%="#{@camper.name}"%></h2>
+  <h2 class="d-flex justify-content-center align-items-center">Book the <%="#{@camper.name}"%></h2>
   <div class="mt-4">
     <%= simple_form_for [@camper, @booking] do |f| %>
       <div class="booking-form">

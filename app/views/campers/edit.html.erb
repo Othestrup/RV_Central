@@ -1,14 +1,17 @@
-<h1>Update your camper</h1>
-
-
-<%= simple_form_for [@camper] do |f| %>
-  <div class="booking-form">
-    <%= f.input :name %>
-    <%= f.input :description, as: :text %>
-    <%= f.input :price, label: "Enter your price per day" %>
-    <%= f.input :address, label: "Where is your camper located?" %>
-    <%= f.input :image, as: :file %>
-    <%= f.button :submit, value: "Submit" %>
+<div class="content-campers mt-5" style="width:40%;">
+  <h2 class="d-flex justify-content-center align-items-center">Update your camper</h2>
+  <div class="mt-4">
+  <%= simple_form_for [@camper] do |f| %>
+    <div class="booking-form">
+      <%= f.input :name %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :price, label: "Enter your price per day" %>
+      <%= f.input :address, label: "Where is your camper located?" %>
+      <%= f.input :image, as: :file %>
+      <div class="form-actions d-flex justify-content-center align-items-center">
+        <%= f.button :submit, value: "Update", class: "btn btn-warning mt-4 mb-5", style: "border-radius:6px;" %>
+      </div>
     </div>
+    <% end %>
   </div>
-<% end %>
+</div>
