@@ -1,16 +1,16 @@
 .image-show {
-  width: 60%;
+  width: 50%;
   border-radius: 40px;
-  box-shadow: 0 4px 8px 0 rgba(15, 15, 15, 0.2);
-  margin: 0 auto;
 }
 
 .image-show img {
+  width: 100%;
   border-radius: 40px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px 0 rgba(15, 15, 15, 0.2);
 }
 
 .back-list {
-  width: 60%;
   margin: 0 auto;
   padding-bottom: 20px;
 }
@@ -27,6 +27,7 @@
   padding: 30px 0;
 }
 
-.price-booking-text {
-  text-align: right;
+.box-information-camper {
+  width: 50%;
+  padding-right: 50px;
 }
