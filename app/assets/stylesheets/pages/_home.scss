@@ -1,6 +1,19 @@
 // Specific CSS for your home-page
 .back {
-  background-image: asset-url('van-picture.jpg');
+  background-image: asset-url('van-picture-1.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-booking {
+  background-image: asset-url('background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.opacity-img {
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -8,9 +21,9 @@
 }
 
 .box {
-  width: 1100px;
   text-align: center;
   margin: 0 auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
 .text-banner {
@@ -30,19 +43,40 @@
 
 h1 {
   font-size: 60px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
-  font-size: 32px;
-  color: rgb(70, 50, 15);
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  color: #e57d23;
   margin: 0;
+}
+
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  color: #e57d23;
+}
+
+h5 {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .h2-banner {
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .button-banner {
   text-align: center;
@@ -52,4 +86,18 @@ h2 {
   font-size: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+  border: 2px solid white;
+}
+
+.button-banner a:hover {
+  transform: scale(1.5);
+  background-color: #e57d23;
+  border: 2px solid #e57d23;
+}
+
+body {
+  background-color: #b8c6db;
+  background-image: linear-gradient(115deg, #cdd9e6 0%, #f5f7fa 30%);
 }
