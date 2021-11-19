@@ -18,7 +18,7 @@
     <% @campers.each do |camper| %>
       <div class="card rounde col-3 mb-5 p-3">
       <% if camper.image.attached? %>
-      <%= image_tag(camper.image, class:"card-img-top pt-5")%>
+      <%= image_tag(camper.image, class:"card-img-top pt-1")%>
       <% else %>
         <%= image_tag("camper.jpg", :alt => "camperpic", class:"card-img-top pt-5") %>
       <% end %>
