@@ -1,7 +1,8 @@
-<div class="content-campers mt-5" style="height: 65vh;">
+<div class="content-campers mt-5 mb-5" style="height: 65vh;">
   <div class=" mt-4 mb-4">
     <%= link_to "⬅️ back to #{@booking.camper.name} available", new_camper_booking_path(@booking.camper, @booking), class: "text-dark" %>
   </div>
+
   <div class="d-flex">
     <div class="d-flex justify-content-center">
       <div class="p-5 image-booking" style="border-radius:15px ; box-shadow: 0 4px 8px 0 rgba(15, 15, 15, 0.2); margin:10px;">
@@ -14,13 +15,15 @@
           <h4 class="text-dark">Total price of your booking is <%= @camper.price * (@booking.end_date - @booking.start_date).to_i %>€</h4>
         </div>
       </div>
+    </div>
     <div class="image-show" style="margin:10px;">
       <% if @camper.image.attached? %>
-      <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)); object-fit: contain;", url('<%= cl_image_path @camper.image.key, height: 300, width: 200, crop: :fill %>')">
+          <div style="height: 100%; border-radius:15px; background-size:cover; background-position:center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @camper.image.key, height: 300, crop: :fill %>');"></div>
+
       <% else %>
-      <%= image_tag("camper.jpg", style: "border-radius:15px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));") %>
+          <%= image_tag("camper.jpg", style: "border-radius:15px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));") %>
       <% end %>
     </div>
+    </div>
   </div>
-</div>
 </div>
