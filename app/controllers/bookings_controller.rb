@@ -25,6 +25,16 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @camper = Camper.find(params[:camper_id])
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.camper = @camper
+    authorize @booking
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render :new
+    end
   end
 
   def edit
